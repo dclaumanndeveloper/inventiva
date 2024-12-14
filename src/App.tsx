@@ -1,10 +1,13 @@
+import { RouterProvider } from 'react-router-dom'
 import './App.css'
-import { LoginForm } from './components/login-form'
+import { router } from './routes'
 
 function App() {
 
   return (
-    <LoginForm/>
+   <RouterProvider router={router}/>
+
+ 
   )
 }
 
