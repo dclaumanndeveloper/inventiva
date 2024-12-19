@@ -31,7 +31,7 @@ export function LoginForm({
     >
       <Card className="w-full max-w-md mx-auto"> {/* Largura total em mobile, max-width em desktop */}
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Bem vindo ao login do Inventiva Apps</CardTitle>
+          <CardTitle className="text-xl">Bem vindo ao Inventiva Apps</CardTitle>
           <CardDescription>
             Logue-se com sua conta Apple ou Google
           </CardDescription>
