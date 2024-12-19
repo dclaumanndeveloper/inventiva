@@ -1,10 +1,11 @@
 import {createBrowserRouter} from 'react-router-dom'
 import { LoginPage } from './pages/auth/login'
 import Home from './pages/app/dashboard/dashboard'
-import Inbox from './pages/app/inbox/inbox'
+
 import Calendar from './pages/app/calendar/calendar'
 import Settings from './pages/app/settings/settings'
 import Search from './pages/app/search/search'
+import { Inbox } from './pages/app/inbox/inbox'
 
 export const router = createBrowserRouter(
     [
