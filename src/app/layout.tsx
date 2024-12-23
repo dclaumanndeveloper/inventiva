@@ -6,15 +6,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
     <div className="flex h-screen">
       <AppSidebar />
-      <div className="flex-1 relative  md:pt-4"> {/* Container relativo para o trigger */}
-        <SidebarTrigger className="absolute top-4 left-4 z-10 md:hidden" /> {/* Trigger posicionado e oculto em telas maiores */}
-        <main className="p-4 md:pt-4 md:mr-4  w-full h-full"> {/* Padding para o main em telas maiores */}
+      <div className="flex-1 relative  md:pt-4">
+        <SidebarTrigger className="absolute top-4 left-4 z-10 md:hidden" />
+        <main className="p-4 md:pt-4 md:mr-4  w-full h-full"> 
           {children}
         </main>
       </div>
     </div>
   </SidebarProvider>
-  //md:pl-[250px]
-  //
+ 
   )
 }
