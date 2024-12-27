@@ -35,6 +35,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import Layout from "@/app/layout"
+import { Helmet } from "react-helmet-async"
 
 const data: Payment[] = [
     {
@@ -196,6 +197,8 @@ const data: Payment[] = [
     })
    
     return (
+      <>
+        <Helmet title="Inbox" />
         <Layout>
           <div className="w-full h-full">
             <div className="flex items-center">
@@ -310,5 +313,6 @@ const data: Payment[] = [
             </div>
           </div>
         </Layout>
+        </>
     )
   }

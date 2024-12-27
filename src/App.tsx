@@ -1,12 +1,15 @@
 import { RouterProvider } from 'react-router-dom'
 import { router } from './routes'
 import './App.css'
+import { HelmetProvider,Helmet } from 'react-helmet-async'
 
-function App() {
+export function App() {
 
   return (
-   <RouterProvider router={router}/>
-
+    <HelmetProvider>
+      <Helmet titleTemplate="%s | Inventiva Apps"  />  
+      <RouterProvider router={router}/>
+    </HelmetProvider>
  
   )
 }
