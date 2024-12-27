@@ -10,13 +10,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
-
+import {AppleIcon, Fingerprint } from "lucide-react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   const navigate = useNavigate();
-
+  
   function handleSubmit() {
     navigate("/dashboard");
   }
@@ -42,10 +43,12 @@ export function LoginForm({
               <div className="flex flex-col gap-4">
                 <Button variant="outline" className="w-full">
                   {/* Icone Apple */}
+                 <AppleIcon className="w-6 h-6" />
                   Login com Apple
                 </Button>
                 <Button variant="outline" className="w-full">
                   {/* Icone Google */}
+                  <Fingerprint className="w-6 h-6" />
                   Login with Google
                 </Button>
               </div>
@@ -57,7 +60,7 @@ export function LoginForm({
               <div className="grid gap-6">
                 <div className="grid gap-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="m@example.com" required />
+                  <Input id="email" name="email" type="email" placeholder="m@example.com" required />
                 </div>
                 <div className="grid gap-2">
                   <div className="flex items-center">
@@ -69,7 +72,7 @@ export function LoginForm({
                       Esqueceu sua senha?
                     </a>
                   </div>
-                  <Input id="password" type="password" required />
+                  <Input id="password" name="password" type="password" required />
                 </div>
                 <Button type="submit" className="w-full">
                   Login
